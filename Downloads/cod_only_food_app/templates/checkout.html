@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Checkout (Cash on Delivery)</h3>
+<form method="post" action="{{ url_for('checkout') }}" class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Full Name</label>
+    <input required name="name" class="form-control" placeholder="Your name">
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Phone</label>
+    <input required name="phone" class="form-control" placeholder="10-digit phone">
+  </div>
+  <div class="col-12">
+    <label class="form-label">Delivery Address</label>
+    <textarea required name="address" class="form-control" rows="3" placeholder="House no, Street, Area, City, Pincode"></textarea>
+  </div>
+  <div class="col-12">
+    <div class="alert alert-secondary mb-2">
+      Payment Method: <strong>Cash on Delivery</strong> only.
+    </div>
+  </div>
+  <div class="col-12 d-flex justify-content-between">
+    <a href="{{ url_for('view_cart') }}" class="btn btn-outline-secondary">← Back to Cart</a>
+    <button class="btn btn-success">Place Order</button>
+  </div>
+</form>
+{% endblock %}

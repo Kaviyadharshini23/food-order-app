@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center my-5">
+  <h2>🎉 Order Placed!</h2>
+  <p>Your order <strong>#{{ order_id }}</strong> is confirmed for <strong>Cash on Delivery</strong>.</p>
+  <p>Estimated delivery time: {{ eta }}</p>
+  <a class="btn btn-primary mt-3" href="{{ url_for('home') }}">Order More</a>
+</div>
+{% endblock %}

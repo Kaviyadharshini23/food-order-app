@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>All Orders</h3>
+<form method="post" action="{{ url_for('admin_orders') }}" class="mb-3">
+  {% if not authed %}
+    <div class="input-group" style="max-width:400px;">
+      <input type="password" name="password" class="form-control" placeholder="Admin password">
+      <button class="btn btn-primary">View Orders</button>
+    </div>
+  {% else %}
+    <div class="alert alert-success">Authenticated.</div>
+  {% endif %}
+</form>
+
+{% if authed %}
+  {% if not orders %}
+    <p>No orders yet.</p>
+  {% else %}
+    <div class="table-responsive">
+      <table class="table">
+        <thead><tr><th>Order ID</th><th>Name</th><th>Phone</th><th>Address</th><th>Total</th><th>Time</th></tr></thead>
+        <tbody>
+          {% for o in orders %}
+          <tr>
+            <td>#{{ o.id }}</td>
+            <td>{{ o.customer.name }}</td>
+            <td>{{ o.customer.phone }}</td>
+            <td>{{ o.customer.address }}</td>
+            <td>₹ {{ o.total }}</td>
+            <td>{{ o.created_at }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+{% endif %}
+{% endblock %}

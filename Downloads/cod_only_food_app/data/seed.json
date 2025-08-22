@@ -1,0 +1,102 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Spice Route Biryani",
+      "cuisine": "Biryani, North Indian",
+      "rating": 4.4,
+      "eta": "35-45 mins",
+      "image": "/static/img/biryani.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Veggie Delight",
+      "cuisine": "South Indian, Pure Veg",
+      "rating": 4.2,
+      "eta": "20-30 mins",
+      "image": "/static/img/veg.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Street Side Burgers",
+      "cuisine": "Fast Food, Burgers",
+      "rating": 4.0,
+      "eta": "25-35 mins",
+      "image": "/static/img/burger.jpg"
+    }
+  ],
+  "menu_items": [
+    {
+      "id": 101,
+      "restaurant_id": 1,
+      "name": "Chicken Biryani",
+      "price": 220,
+      "desc": "Aromatic basmati rice with chicken.",
+      "veg": false
+    },
+    {
+      "id": 102,
+      "restaurant_id": 1,
+      "name": "Mutton Biryani",
+      "price": 280,
+      "desc": "Slow-cooked mutton with spices.",
+      "veg": false
+    },
+    {
+      "id": 103,
+      "restaurant_id": 1,
+      "name": "Egg Biryani",
+      "price": 180,
+      "desc": "Spicy biryani with boiled eggs.",
+      "veg": false
+    },
+    {
+      "id": 201,
+      "restaurant_id": 2,
+      "name": "Masala Dosa",
+      "price": 90,
+      "desc": "Crispy dosa with masala filling.",
+      "veg": true
+    },
+    {
+      "id": 202,
+      "restaurant_id": 2,
+      "name": "Idli Sambar (3 pcs)",
+      "price": 70,
+      "desc": "Soft idlis with hot sambar.",
+      "veg": true
+    },
+    {
+      "id": 203,
+      "restaurant_id": 2,
+      "name": "Veg Thali",
+      "price": 150,
+      "desc": "Assorted veg curries, rice & roti.",
+      "veg": true
+    },
+    {
+      "id": 301,
+      "restaurant_id": 3,
+      "name": "Classic Veg Burger",
+      "price": 120,
+      "desc": "Crispy patty with veggies.",
+      "veg": true
+    },
+    {
+      "id": 302,
+      "restaurant_id": 3,
+      "name": "Chicken Burger",
+      "price": 160,
+      "desc": "Juicy chicken patty burger.",
+      "veg": false
+    },
+    {
+      "id": 303,
+      "restaurant_id": 3,
+      "name": "French Fries",
+      "price": 80,
+      "desc": "Crispy golden fries.",
+      "veg": true
+    }
+  ]
+}
